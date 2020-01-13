@@ -30,7 +30,6 @@ public class App {
 
         CounterService counterService = new CounterServiceMillionNumbers();
         counterService.count(argA, argB);
-//        System.out.println(String.format("input one: %d\ninput two: %d", argA, argB));
     }
 
     private static void exit(String errorMessage) {
