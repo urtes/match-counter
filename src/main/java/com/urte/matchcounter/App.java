@@ -1,5 +1,8 @@
 package com.urte.matchcounter;
 
+import com.urte.matchcounter.counter.CounterService;
+import com.urte.matchcounter.counter.CounterServiceMillionNumbers;
+
 import java.math.BigInteger;
 
 /**
@@ -25,7 +28,9 @@ public class App {
             exit(ARGUMENTS_ERROR);
         }
 
-        System.out.println(String.format("input one: %d\ninput two: %d", argA, argB));
+        CounterService counterService = new CounterServiceMillionNumbers();
+        counterService.count(argA, argB);
+//        System.out.println(String.format("input one: %d\ninput two: %d", argA, argB));
     }
 
     private static void exit(String errorMessage) {
