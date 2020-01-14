@@ -7,7 +7,7 @@ The application is developed in Java, using Maven.
 
 ## Build
 
-From parent rum `mvn clean install`.
+From parent run `mvn clean install`.
 
 ## Installation
 
