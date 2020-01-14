@@ -39,6 +39,13 @@ public class CounterServiceV1 implements CounterService {
     public int countMatches(BigInteger argA, BigInteger argB) {
 
         int matchCount = 0;
+        BigInteger zero = new BigInteger("0");
+
+        if (argA.equals(zero) || argB.equals(zero)) {
+            System.out.println(matchCount);
+            return 0;
+        }
+
         BigInteger numberA = argA;
         BigInteger numberB = argB;
 
