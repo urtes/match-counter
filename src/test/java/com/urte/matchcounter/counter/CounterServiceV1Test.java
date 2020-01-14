@@ -12,7 +12,7 @@ public class CounterServiceV1Test {
 
     @Test
     public void testCount() {
-        assertEquals(3868, counterService.count(
+        assertEquals(3868, counterService.countMatches(
                 new BigInteger("65"),
                 new BigInteger("8921")));
     }

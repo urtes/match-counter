@@ -5,6 +5,9 @@ import com.urte.matchcounter.generator.GeneratorService;
 
 import java.math.BigInteger;
 
+/**
+ * Implementation of CounterService that counts matches between one million pairs of generated numbers.
+ */
 public class CounterServiceV1 implements CounterService {
 
     private static final int COMPARISONS = 1000000;
@@ -12,7 +15,6 @@ public class CounterServiceV1 implements CounterService {
     private static final BigInteger DIVIDER = new BigInteger("2147483647");
     private static final BigInteger MULTIPLIER_A = new BigInteger("16807");
     private static final BigInteger MULTIPLIER_B = new BigInteger("48271");
-
 
     private GeneratorService generatorServiceA = (BigInteger number) ->
             generate(number, MULTIPLIER_A);
@@ -34,7 +36,7 @@ public class CounterServiceV1 implements CounterService {
     };
 
     @Override
-    public int count(BigInteger argA, BigInteger argB) {
+    public int countMatches(BigInteger argA, BigInteger argB) {
 
         int matchCount = 0;
         BigInteger numberA = argA;

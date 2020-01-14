@@ -29,7 +29,7 @@ public class App {
         }
 
         CounterService counterService = new CounterServiceV1();
-        counterService.count(argA, argB);
+        counterService.countMatches(argA, argB);
     }
 
     private static void exit(String errorMessage) {
