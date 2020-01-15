@@ -1,14 +1,16 @@
 package com.urte.matchcounter.counter;
 
+import com.urte.matchcounter.config.Configuration;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
 import static org.junit.Assert.assertEquals;
 
-public class CounterServiceV1Test {
+public class SimpleCounterServiceTest {
 
-    CounterService counterService = new SimpleCounterService();
+    Configuration configuration = new Configuration();
+    CounterService counterService = configuration.getCounterService();
 
     @Test
     public void testCount() {

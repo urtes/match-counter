@@ -1,7 +1,7 @@
 package com.urte.matchcounter;
 
+import com.urte.matchcounter.config.Configuration;
 import com.urte.matchcounter.counter.CounterService;
-import com.urte.matchcounter.counter.SimpleCounterService;
 
 import java.math.BigInteger;
 
@@ -28,7 +28,8 @@ public class App {
             exit(ARGUMENTS_ERROR);
         }
 
-        CounterService counterService = new SimpleCounterService();
+        Configuration configuration = new Configuration();
+        CounterService counterService = configuration.getCounterService();
         counterService.countMatches(argA, argB);
     }
 
