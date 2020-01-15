@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CounterServiceV1Test {
 
-    CounterService counterService = new CounterServiceV1();
+    CounterService counterService = new SimpleCounterService();
 
     @Test
     public void testCount() {

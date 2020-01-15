@@ -1,7 +1,7 @@
 package com.urte.matchcounter;
 
 import com.urte.matchcounter.counter.CounterService;
-import com.urte.matchcounter.counter.CounterServiceV1;
+import com.urte.matchcounter.counter.SimpleCounterService;
 
 import java.math.BigInteger;
 
@@ -10,7 +10,7 @@ import java.math.BigInteger;
  */
 public class App {
 
-    private final static String ARGUMENTS_ERROR = "Please enter two numbers";
+    public final static String ARGUMENTS_ERROR = "Please enter two numbers";
 
     public static void main( String[] args )
     {
@@ -28,7 +28,7 @@ public class App {
             exit(ARGUMENTS_ERROR);
         }
 
-        CounterService counterService = new CounterServiceV1();
+        CounterService counterService = new SimpleCounterService();
         counterService.countMatches(argA, argB);
     }
 
